@@ -6,7 +6,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="nav-body">
-      <Navbar collapseOnSelect expand="lg" className="nav-bar">
+      <Navbar collapseOnSelect expand="lg" className="nav-bar sticky-top">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <span className="brand-name">Spicy Velvet</span>

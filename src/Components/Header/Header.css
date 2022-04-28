@@ -1,6 +1,6 @@
 .nav-body {
-    /* background-color: #475046; */
-    background-color: #627261;
+    background-color: #333932;
+    /* background-color: #627261; */
 }
 
 .brand-name {
@@ -14,6 +14,7 @@
 .nav-bar {
     color: #F5F5F3;
     font-size: 1em;
+    transition: ease-in-out 0.3s;
 }
 
 .nav-bar:hover {
