@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Components/Header/Header";
-import Footer from "./Components/Pages/Home/Home";
-import Home from "./Components/Pages/Home/Home";
+import Footer from "./Components/Footer/Footer";
+import Home from "./Components/Pages/Home/Home/Home";
 import Inventorys from "./Components/Pages/Inventorys/Inventorys";
 
 function App() {

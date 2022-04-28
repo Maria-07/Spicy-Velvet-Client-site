@@ -5,9 +5,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Lato', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/*--------------------------------------------------------
+
+color code :  #627261
+              #D0D5D0
+              #B0A69A
+              #F5F5F3
+              
+
+font-family: 'Lato',
+sans-serif;
+font-family: 'Noto Serif',
+serif;
+font-family: 'Poppins',
+sans-serif;
+font-family: 'Prata',
+serif;
+
+--------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif&family=Poppins:wght@200;300;400;500;700&family=Prata&display=swap');
