@@ -7,6 +7,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "./ProductDetails.css";
 import Rating from "react-rating";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -21,7 +22,19 @@ const ProductDetails = () => {
 
   const quantityNumber = () => {
     // console.log(quantity);
-    setQuantity(quantity - 1);
+    const data = {
+      quantity: quantity - 1,
+    };
+    axios
+      .put(`http://localhost:5000/products/${productId}`, data)
+      .then((response) => {
+        const { data } = response;
+        // console.log(data);
+        if (data.modifiedCount == 1) {
+          toast("your Quantity updated");
+          setQuantity(quantity - 1);
+        }
+      });
   };
 
   return (
@@ -74,6 +87,7 @@ const ProductDetails = () => {
           </Col>
         </Row>
       </Container>
+      <ToastContainer />
     </div>
   );
 };

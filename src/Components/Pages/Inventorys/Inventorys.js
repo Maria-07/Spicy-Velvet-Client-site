@@ -13,6 +13,7 @@ const Inventorys = () => {
       setProducts(data.data);
     });
   }, []);
+
   return (
     <div className="inventorys">
       <Container>
