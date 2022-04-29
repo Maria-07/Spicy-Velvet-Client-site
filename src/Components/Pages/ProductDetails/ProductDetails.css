@@ -1,0 +1,52 @@
+.productId {
+    background-color: #F5F5F3;
+}
+
+.product-route {
+    background-color: #fff;
+    padding: 2em 0;
+    text-align: start;
+    margin-bottom: 3em;
+}
+
+.products-detail {
+    margin-top: 1em;
+    text-align: start;
+}
+
+.products-detail h2 {
+    text-align: start;
+    font-size: 2em;
+    font-family: 'Prata',
+        serif;
+    color: #333932;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.details {
+    color: #627261;
+    margin-top: 1.5em;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.review {
+    margin-left: 1em;
+}
+
+.quantity {
+    margin: 2em 0;
+}
+
+.quantity p {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.quantity span {
+    margin-left: 1em;
+    padding: 10px 3em;
+    background-color: #D0D5D0;
+}
