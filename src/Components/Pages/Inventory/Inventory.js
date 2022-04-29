@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import "./Inventory.css";
 
 const Inventory = ({ product }) => {
-  const { name, picture, description, Price, Quantity, supplier } = product;
+  const { _id, name, picture, description, Price, Quantity, supplier } =
+    product;
   console.log(product);
   return (
     <div className="product">
@@ -23,7 +24,7 @@ const Inventory = ({ product }) => {
         </p>
       </div>
       <div className="product-button w-100">
-        <Link to={"inventory:_id"}>
+        <Link to={`products/${_id}`}>
           <button className="w-100 py-2">Product Manage</button>
         </Link>
       </div>
