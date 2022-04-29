@@ -22,7 +22,7 @@ const LoginBox = () => {
         </Row> */}
         <div className="d-flex flex-wrap bd-highlight example-parent">
           <div className="p-2 mt-2 flex-grow-1 bd-highlight col-example">
-            <h4>Sign in to see what's available in your Spicy Inventory .</h4>
+            <h4>Sign in to see what's available in our Spicy Inventory .</h4>
           </div>
 
           <div className="mx-5 p-3 bd-highlight col-example">

@@ -1,0 +1,19 @@
+.inventorys {
+    margin: 8em 0;
+}
+
+.Inventory-header {
+    font-family: 'Prata',
+        serif;
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 7px;
+    color: #627261;
+    margin: 1em 0;
+}
+
+.more {
+    text-align: end;
+    text-decoration: none;
+
+}
