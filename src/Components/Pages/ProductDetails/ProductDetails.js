@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
@@ -6,17 +6,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "./ProductDetails.css";
 import Rating from "react-rating";
+import axios from "axios";
 
 const ProductDetails = () => {
   const { productId } = useParams();
   const [product] = UseProduct(productId);
-  const { _id, name, picture, description, Price, supplier, sold, Quantity } =
-    product;
-  let [updateQuantity, setUpadateQuantity] = useState();
+  const { name, picture, description, Price, supplier, sold } = product;
 
-  const updateQuantityNumber = () => {
-    console.log(updateQuantity);
-    setUpadateQuantity(updateQuantity - 1);
+  const [quantity, setQuantity] = useState(0);
+
+  useEffect(() => {
+    setQuantity(product.Quantity);
+  }, [product]);
+
+  const quantityNumber = () => {
+    // console.log(quantity);
+    setQuantity(quantity - 1);
   };
 
   return (
@@ -58,19 +63,11 @@ const ProductDetails = () => {
               </p>
               <div className="quantity">
                 <p>
-                  Quantity : <span>{Quantity}</span>
-                </p>
-              </div>
-              <div className="quantity">
-                <p>
-                  Quantity : <span>{updateQuantity}</span>
+                  Quantity : <span>{quantity}</span>
                 </p>
               </div>
 
-              <button
-                onClick={() => updateQuantityNumber()}
-                className="delivered"
-              >
+              <button onClick={() => quantityNumber()} className="delivered">
                 Delivered
               </button>
             </div>
