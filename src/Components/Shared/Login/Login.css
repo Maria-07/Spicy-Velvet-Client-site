@@ -1,0 +1,84 @@
+/* .login {
+    text-align: center;
+} */
+
+.login-form {
+    width: 40%;
+    margin: 5em 0;
+    padding: 2em 3em;
+    background-color: #d0d5d045;
+    border: 1px solid #627261;
+    box-shadow: 0 0 20px rgba(51, 57, 50, 0.15);
+}
+
+.login-form h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+    color: #627261;
+}
+
+.filed-name {
+    font-size: 1.1em;
+}
+
+.login-details {
+    margin: 2em 0;
+    text-align: start;
+}
+
+.input-field {
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.submit-btn {
+    font-weight: 600;
+    font-size: 1.4em;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: #627261;
+    color: #fff;
+    border: none;
+    margin: 2em 0;
+    transition: ease-in-out 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #F5F5F3;
+    border: 2px solid #627261;
+    color: #627261;
+}
+
+.link-text {
+    color: #627261;
+}
+
+.login-form p {
+    font-size: 1.1em;
+}
+
+.google-img {
+    height: 50px;
+}
+
+.social {
+
+    border: none;
+    background-color: none;
+}
+
+.or {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+/* responsive  */
+
+@media only screen and (max-width: 600px) {
+    .login-form {
+        width: 100%;
+        margin: 2em 0;
+        padding: 2em 2em;
+        background-color: #D0D5D0;
+    }
+}
