@@ -8,7 +8,7 @@ const Login = () => {
     <Container>
       <div className="login-form mx-auto">
         <form>
-          <h1>LogIn</h1>
+          <h1>Log In</h1>
           <div className="login-details">
             <p className="filed-name">Email</p>
             <input

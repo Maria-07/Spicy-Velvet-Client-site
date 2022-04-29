@@ -5,7 +5,7 @@ import "./Inventory.css";
 const Inventory = ({ product }) => {
   const { _id, name, picture, description, Price, Quantity, supplier } =
     product;
-  console.log(product);
+  // console.log(product);
   return (
     <div className="product">
       <img className="w-100" src={picture} alt="" />
