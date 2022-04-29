@@ -1,17 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
+import Loading from "../Loading/Loading";
 import "./Login.css";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  let errorElement;
+
+  const handleEmailBlur = (e) => setEmail(e.target.value);
+  const handlePasswordBlur = (e) => setPassword(e.target.value);
+
+  // sign in with email
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  if (error) {
+    errorElement = <p className="error">Error: {error.message}</p>;
+  }
+
+  // sign in with google
+  const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+  if (error1) {
+    errorElement = <p className="error">Error: {error1.message}</p>;
+  }
+
+  // // Password reset
+  // const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+  // const resetPassword = async () => {
+  //   // const email = emailRef.current.value;
+  //   console.log(email);
+  //   if (email) {
+  //     await sendPasswordResetEmail(email);
+  //     toast("Sent email");
+  //   } else {
+  //     toast("please enter your email address");
+  //   }
+  // };
+
+  // route navigate
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
+  if (user || user1) {
+    navigate(from, { replace: true });
+  }
+
+  if (loading || loading1) {
+    return <p>Loading...</p>;
+  }
+
+  if (user || user1) {
+    navigate(from, { replace: true });
+  }
+
+  const handleUserSignIn = (event) => {
+    event.preventDefault();
+    signInWithEmailAndPassword(email, password);
+  };
+
   return (
     <Container>
       <div className="login-form mx-auto">
-        <form>
+        <form onSubmit={handleUserSignIn}>
           <h1>Log In</h1>
           <div className="login-details">
             <p className="filed-name">Email</p>
             <input
+              onBlur={handleEmailBlur}
               className="input-field w-100"
               type="email"
               placeholder="Your Email"
@@ -21,12 +82,18 @@ const Login = () => {
           <div className="login-details">
             <p className="filed-name">Password</p>
             <input
+              onBlur={handlePasswordBlur}
               className="input-field w-100"
               type="password"
               placeholder="Your Password"
               required
             />
           </div>
+
+          <br />
+          {errorElement}
+          {/* <p>{error?.message}</p> */}
+          {loading && <Loading></Loading>}
 
           <input type="submit" className="submit-btn w-100" value="Login" />
 
@@ -37,16 +104,24 @@ const Login = () => {
             </Link>
           </p>
 
+          {/* <p>
+            Forget Password?{" "}
+            <button
+              onClick={resetPassword}
+              className="text-decoration-none link-text password"
+            >
+              Reset Password.
+            </button>
+          </p> */}
+
           <div className="my-4 or">Or</div>
 
-          <button
-            // onClick={() => signInWithGoogle()}
-            className="social w-100"
-          >
+          <button onClick={() => signInWithGoogle()} className="social w-100">
             <img src="google.png" className="google-img mx-3" alt="" />
             Continue with Google
           </button>
         </form>
+        {/* <ToastContainer /> */}
       </div>
     </Container>
   );

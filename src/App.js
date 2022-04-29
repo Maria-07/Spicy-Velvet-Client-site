@@ -7,6 +7,7 @@ import Home from "./Components/Pages/Home/Home/Home";
 import Login from "./Components/Shared/Login/Login";
 import SignUp from "./Components/Shared/SignUp/SignUp";
 import ProductDetails from "./Components/Pages/ProductDetails/ProductDetails";
+import Requires from "./Components/Shared/Requires/Requires";
 
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route
           path="/products/:productId"
-          element={<ProductDetails></ProductDetails>}
+          element={
+            <Requires>
+              <ProductDetails></ProductDetails>
+            </Requires>
+          }
         ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>

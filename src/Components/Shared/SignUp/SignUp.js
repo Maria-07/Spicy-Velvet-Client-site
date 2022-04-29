@@ -26,11 +26,11 @@ const SignUp = () => {
 
   //create account with email And password :
   const [createUserWithEmailAndPassword, user, errorAuth] =
-    useCreateUserWithEmailAndPassword(auth);
-  // useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    // useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   if (errorAuth) {
-    errorElement = <p className="text-red-500">Error: {errorAuth.message}</p>;
+    errorElement = <p className="error">Error: {errorAuth.message}</p>;
   }
 
   //sign Up with google
@@ -98,7 +98,7 @@ const SignUp = () => {
             </div>
             <br />
             {errorElement}
-            <p className=" text-red-600">{error}</p>
+            <p className="error">{error}</p>
             <input
               type="submit"
               className="submit-btn w-100"
