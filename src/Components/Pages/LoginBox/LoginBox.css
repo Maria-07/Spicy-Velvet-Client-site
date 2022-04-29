@@ -1,0 +1,24 @@
+.login-box {
+    margin: 5em 0;
+    padding: 1em;
+    background-color: #F5F5F3;
+    border: 1px solid #627261;
+}
+
+.login,
+.signup {
+    font-size: 1.2em;
+    padding: 5px 20px;
+    margin: 0 10px;
+    transition: ease-in-out 0.4s;
+}
+
+.login {
+    background-color: #627261;
+    color: #F5F5F3;
+}
+
+.signup:hover {
+    background-color: #627261;
+    color: #F5F5F3;
+}

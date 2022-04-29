@@ -5,8 +5,8 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="nav-body">
-      <Navbar collapseOnSelect expand="lg" className="nav-bar sticky-top">
+    <div className="nav-body sticky-top">
+      <Navbar collapseOnSelect expand="lg" className="nav-bar ">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <span className="brand-name">Spicy Velvet</span>
@@ -15,7 +15,7 @@ const Header = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
             <Nav>
-              <Nav.Link as={Link} to="home">
+              <Nav.Link as={Link} to="/">
                 <span className="nav-bar link">HOME</span>
               </Nav.Link>
               <Nav.Link as={Link} to="blogs">
