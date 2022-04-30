@@ -1,0 +1,31 @@
+.product-height {
+    height: 960px;
+    margin: 2em 0;
+    box-shadow: 0 0 16px rgba(51, 57, 50, 0.15);
+    transition: ease-in-out 0.3s;
+    position: relative;
+}
+
+.product-height:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 24px rgba(51, 57, 50, .2);
+    /*x y blur clr*/
+}
+
+.delivered-btn {
+    width: 100%;
+    bottom: 35px;
+    position: absolute;
+    border: none;
+    background-color: #333932;
+    color: #F5F5F3;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 10px 3em;
+    transition: ease-in-out 0.3s;
+    left: 0;
+}
+
+.delivered-btn:hover {
+    background-color: #627261;
+}

@@ -1,0 +1,22 @@
+.spice {
+    background-color: #fff;
+    padding: 5em 0;
+}
+
+.spice h1 {
+    font-family: 'Prata',
+        serif;
+    font-size: 3em;
+    color: #627261;
+    /* font-weight: 500; */
+    margin-bottom: 16px;
+}
+
+.spice p {
+    letter-spacing: 1px;
+    color: #333932;
+    margin-top: 1.1em;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 1em;
+}

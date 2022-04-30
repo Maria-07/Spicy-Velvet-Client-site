@@ -1,0 +1,22 @@
+.spice-dong {
+    background-image: url('../../../../images/Spices/bg-1.png');
+    background-size: 70%;
+    /* height: 100vh; */
+    /* position: static; */
+    margin-top: 10em;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.article {
+    background-color: #fff;
+}
+
+.article h1 {
+    text-align: start;
+}
+
+.article p {
+    margin-top: 10px;
+    text-align: start;
+}

@@ -22,6 +22,9 @@ const AddNewItem = () => {
     })
       .then((response) => response.json())
       .then((result) => {
+        // if (result.acknowledged === "true") {
+        //   alert("done");
+        // }
         console.log(result);
       });
   };

@@ -1,12 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./ManageInventory.css";
 
 const ManageInventory = ({ product }) => {
   const { _id, name, picture, description, Price, Quantity, supplier } =
     product;
   // console.log(product);
+
+  const handleDeleteProduct = (id) => {
+    const proceed = window.confirm(
+      "Are you sure you want to delete this product"
+    );
+    if (proceed) {
+      console.log("deleting this :", id);
+    }
+  };
+
   return (
-    <div className="product">
+    <div className="product-height">
       <img className="w-100" src={picture} alt="" />
       <div className="product-detail">
         <h3 className="product-name">{name}</h3>
@@ -20,6 +31,12 @@ const ManageInventory = ({ product }) => {
         <p className="supplier">
           <span>Price : </span>
           {Price}
+        </p>
+        <p
+          onClick={() => handleDeleteProduct(_id)}
+          className="delivered-btn my-3"
+        >
+          Delete
         </p>
       </div>
       <div className="product-button w-100">
