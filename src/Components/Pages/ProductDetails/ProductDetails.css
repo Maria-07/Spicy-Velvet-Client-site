@@ -2,6 +2,10 @@
     background-color: #F5F5F3;
 }
 
+.product-info {
+    padding: 3em 0;
+}
+
 .product-route {
     background-color: #fff;
     padding: 2em 0;
@@ -12,6 +16,7 @@
 .products-detail {
     margin-top: 1em;
     text-align: start;
+    padding: 0 10px;
 }
 
 .products-detail h2 {
@@ -46,7 +51,42 @@
 }
 
 .quantity span {
-    margin-left: 1em;
+    margin-left: 0.5em;
     padding: 10px 3em;
     background-color: #D0D5D0;
+}
+
+.delivered {
+    margin-top: 1.5em;
+    border: none;
+    background-color: #333932;
+    color: #F5F5F3;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 10px 3em;
+    transition: ease-in-out 0.3s;
+    margin-bottom: 2em;
+}
+
+.delivered:hover {
+    background-color: #627261;
+}
+
+.restock {}
+
+.restock-form {
+    padding: 2.5em 0 1em;
+    background-color: #D0D5D0;
+}
+
+@media only screen and (max-width: 600px) {
+    .restock-form {
+        width: 100%;
+        padding: 2.5em 0 1em;
+        background-color: #D0D5D0;
+    }
+
+    .restock {
+        width: 100;
+    }
 }

@@ -8,6 +8,7 @@ import Login from "./Components/Shared/Login/Login";
 import SignUp from "./Components/Shared/SignUp/SignUp";
 import ProductDetails from "./Components/Pages/ProductDetails/ProductDetails";
 import Requires from "./Components/Shared/Requires/Requires";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
