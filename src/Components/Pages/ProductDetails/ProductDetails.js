@@ -13,6 +13,7 @@ const ProductDetails = () => {
   const { productId } = useParams();
   const [product] = UseProduct(productId);
   const [number, setNumber] = useState(0);
+  const [error, setError] = useState("");
   const { _id, name, picture, description, Price, supplier, sold } = product;
 
   const [quantity, setQuantity] = useState(0);
@@ -32,32 +33,43 @@ const ProductDetails = () => {
         const { data } = response;
         // console.log(data);
         if (data.modifiedCount === 1) {
-          toast("Your Product Quantity Updated");
+          toast("One of your product is delivered");
           setQuantity(quantity - 1);
         }
       });
   };
 
-  const handleNumberBlur = (e) => setNumber(e.target.value);
+  const handleNumberBlur = (e) => {
+    const num = e.target.value;
+    // isNaN(num) ? setNumber(num) : setError("Enter a valid number");
+    // console.log(typeof num);
+    setNumber(parseInt(num));
+  };
 
   const quantitySubmit = (event) => {
     event.preventDefault();
-    console.log(number);
-    const data = {
-      quantity: parseInt(quantity) + parseInt(number),
-    };
-    axios
-      .put(`http://localhost:5000/products/${productId}`, data)
-      .then((response) => {
-        const { data } = response;
-        // console.log(data);
-        // console.log(quantity);
-        if (data.modifiedCount === 1) {
-          toast("Your Product Quantity Added");
-          setQuantity(parseInt(quantity) + parseInt(number));
-        }
-      });
-    event.target.reset();
+    console.log(typeof number);
+    if (typeof number === "number") {
+      // if (isNaN(number)) {
+      console.log(number);
+      const data = {
+        quantity: parseInt(quantity) + parseInt(number),
+      };
+      axios
+        .put(`http://localhost:5000/products/${productId}`, data)
+        .then((response) => {
+          const { data } = response;
+          // console.log(data);
+          // console.log(quantity);
+          if (data.modifiedCount === 1) {
+            toast("Your Product Quantity Added");
+            setQuantity(parseInt(quantity) + parseInt(number));
+          }
+        });
+      event.target.reset();
+    } else {
+      setError("Enter a valid number");
+    }
   };
 
   return (
@@ -122,12 +134,13 @@ const ProductDetails = () => {
               <h4>Restock the items</h4>
               <input
                 className="input-field w-100 mt-3"
-                type="text"
+                // type="text"
+                type="number"
                 onBlur={handleNumberBlur}
                 placeholder="put number"
               />
             </div>
-
+            <p className="error">{error}</p>
             <input type="submit" value="Submit" className="delivered" />
           </form>
         </Container>
