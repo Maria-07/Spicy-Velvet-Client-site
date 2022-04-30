@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import Inventory from "../Inventory/Inventory";
 import "./Inventorys.css";
@@ -32,9 +33,13 @@ const Inventorys = () => {
               )
           )}
         </Row>
-        <div className="more">
-          <p>See All</p>
-        </div>
+        <Link
+          className="text-decoration-none link-texts"
+          to={"/ManageInventory"}
+        >
+          {" "}
+          <div className="more">Inventory Management</div>
+        </Link>
       </Container>
     </div>
   );

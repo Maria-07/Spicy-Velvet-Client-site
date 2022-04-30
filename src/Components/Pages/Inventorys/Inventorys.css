@@ -17,3 +17,15 @@
     text-decoration: none;
 
 }
+
+.link-texts {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #627261;
+    transition: ease-in-out 0.2s;
+}
+
+.link-texts:hover {
+    color: #627261;
+    letter-spacing: 3px;
+}

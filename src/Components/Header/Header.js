@@ -29,6 +29,9 @@ const Header = () => {
               <Nav.Link as={Link} to="blogs">
                 <span className="nav-bar link">BLOGS</span>
               </Nav.Link>
+              <Nav.Link as={Link} to="addNewItem">
+                <span className="nav-bar link">ADD ITEM</span>
+              </Nav.Link>
 
               {user ? (
                 <Nav.Link onClick={handleSignOut} as={Link} to="login">
