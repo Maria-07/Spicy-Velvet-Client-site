@@ -13,6 +13,15 @@ const ManageInventory = ({ product }) => {
     );
     if (proceed) {
       console.log("deleting this :", id);
+      const url = `https://dry-sea-63438.herokuapp.com/products/${id}`;
+      fetch(url, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
     }
   };
 
@@ -40,7 +49,7 @@ const ManageInventory = ({ product }) => {
         </p>
       </div>
       <div className="product-button w-100">
-        <Link to={`products/${_id}`}>
+        <Link to={`/products/${_id}`}>
           <button className="w-100 py-2">Product Manage</button>
         </Link>
       </div>

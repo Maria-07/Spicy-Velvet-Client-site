@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import React from "react";
 import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
@@ -8,10 +8,7 @@ const AddNewItem = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    const url = `http://localhost:5000/products`;
-    // axios.post(url, { data }).then(function (response) {
-    //   console.log(response);
-    // });
+    const url = `https://dry-sea-63438.herokuapp.com/products`;
 
     fetch(url, {
       method: "POST",
@@ -22,9 +19,6 @@ const AddNewItem = () => {
     })
       .then((response) => response.json())
       .then((result) => {
-        // if (result.acknowledged === "true") {
-        //   alert("done");
-        // }
         console.log(result);
       });
   };
@@ -61,6 +55,12 @@ const AddNewItem = () => {
               placeholder="Quantity"
               type="number"
               {...register("Quantity")}
+            />
+            <input
+              className="w-100 p-2 my-2"
+              placeholder="Total Sold"
+              type="number"
+              {...register("sold")}
             />
             <input
               className="w-100 p-2 my-2"

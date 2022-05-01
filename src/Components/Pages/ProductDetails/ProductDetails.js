@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faStar,
+  faArrowLeft,
+  faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 import "./ProductDetails.css";
 import Rating from "react-rating";
 import axios from "axios";
@@ -28,7 +32,7 @@ const ProductDetails = () => {
       quantity: quantity - 1,
     };
     axios
-      .put(`http://localhost:5000/products/${productId}`, data)
+      .put(`https://dry-sea-63438.herokuapp.com/products/${productId}`, data)
       .then((response) => {
         const { data } = response;
         // console.log(data);
@@ -56,7 +60,7 @@ const ProductDetails = () => {
         quantity: parseInt(quantity) + parseInt(number),
       };
       axios
-        .put(`http://localhost:5000/products/${productId}`, data)
+        .put(`https://dry-sea-63438.herokuapp.com/products/${productId}`, data)
         .then((response) => {
           const { data } = response;
           // console.log(data);
@@ -85,6 +89,7 @@ const ProductDetails = () => {
           <Col xs={12} md={6}>
             <div className="products-detail">
               <h2>{name}</h2>
+              <h5 className="mb-3">Product ID : {_id}</h5>
 
               <div className="rating">
                 <Rating
@@ -121,8 +126,15 @@ const ProductDetails = () => {
               <button onClick={() => quantityNumber()} className="delivered">
                 Delivered
               </button>
-
-              <h5>Product ID : {_id}</h5>
+              <Link
+                className="text-decoration-none link-texts"
+                to={"/products"}
+              >
+                {" "}
+                <div className="mores">
+                  Manage Inventories <FontAwesomeIcon icon={faArrowRight} />
+                </div>
+              </Link>
             </div>
           </Col>
         </Row>

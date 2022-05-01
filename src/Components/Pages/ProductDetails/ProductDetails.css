@@ -57,7 +57,7 @@
 }
 
 .delivered {
-    margin-top: 1.5em;
+    margin-top: 1.3em;
     border: none;
     background-color: #333932;
     color: #F5F5F3;
@@ -70,6 +70,10 @@
 
 .delivered:hover {
     background-color: #627261;
+}
+
+.mores {
+    text-align: start;
 }
 
 

@@ -19,29 +19,22 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route
-          path="/products/:productId"
-          element={
-            <Requires>
-              <ProductDetails></ProductDetails>
-            </Requires>
-          }
-        ></Route>
-        {/* <Route
-          path="/products/:productId"
-          element={
-            <Requires>
-              <ProductDetails></ProductDetails>
-            </Requires>
-          }
-        ></Route> */}
-        <Route
-          path="/ManageInventory"
+          path="/products"
           element={
             <Requires>
               <ManageInventories></ManageInventories>
             </Requires>
           }
         ></Route>
+        <Route
+          path="/products/:productId"
+          element={
+            <Requires>
+              <ProductDetails></ProductDetails>
+            </Requires>
+          }
+        ></Route>
+
         <Route
           path="/addNewItem"
           element={

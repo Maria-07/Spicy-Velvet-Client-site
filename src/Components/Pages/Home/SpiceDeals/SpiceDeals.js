@@ -36,17 +36,15 @@ const SpiceDeals = () => {
             </Col>
             <Col xs={12} md={6}>
               <div className="article py-4 px-4">
-                <h1>10 Most Popular Herbs, Spices and Their Health Benefits</h1>
+                <h1>Spices To Build And Boost Immunity</h1>
                 <p>
-                  Herbs and spices do not only add flavor to our foods, but also
-                  prevent diseases. Luckily, the world is more aware now about
-                  health benefits of herbs and spices, and its so amazing how we
-                  can integrate them into our lifestyle. Whats also great is
-                  that herbs can be planted together in small gardens alongside
-                  with its companion plants. For example, I grow basil in my
-                  garden alongside with tomatoes, chives with carrots and
-                  oregano to almost all vegetables. Thats why I want to share
-                  with you the amazing health benefits of herbs and spices.
+                  Turmeric, or haldi, is a pungent, yellow powder that is not
+                  only used to add color and flavour to your dishes, but also
+                  helps keep you healthy. Commonly used to add sweetness and an
+                  amazing flavour, cinnamon or contains a chemical known as
+                  coumarin. One of the active ingredients in cinnamon, known as
+                  Cayenne is known to have anti-inflammatory properties and is
+                  considered as a metabolism booster spice.
                 </p>
               </div>
             </Col>
