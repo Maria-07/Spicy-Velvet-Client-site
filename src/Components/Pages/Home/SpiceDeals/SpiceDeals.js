@@ -19,10 +19,7 @@ const SpiceDeals = () => {
                   health benefits of herbs and spices, and its so amazing how we
                   can integrate them into our lifestyle. Whats also great is
                   that herbs can be planted together in small gardens alongside
-                  with its companion plants. For example, I grow basil in my
-                  garden alongside with tomatoes, chives with carrots and
-                  oregano to almost all vegetables. Thats why I want to share
-                  with you the amazing health benefits of herbs and spices.
+                  with its companion plants.
                 </p>
               </div>
             </Col>
@@ -35,7 +32,7 @@ const SpiceDeals = () => {
               <img src={img2} className="w-100" alt="" />
             </Col>
             <Col xs={12} md={6}>
-              <div className="article py-4 px-4">
+              <div className="article py-4 px-4 mt-5">
                 <h1>Spices To Build And Boost Immunity</h1>
                 <p>
                   Turmeric, or haldi, is a pungent, yellow powder that is not

@@ -1,0 +1,33 @@
+.footer {
+    background-color: #333932;
+    padding: 3em 0;
+    color: #cfcfcf;
+}
+
+.footer-1 {
+    text-align: start;
+}
+
+.footer-1 h4 {
+    font-family: 'Prata',
+        serif;
+    letter-spacing: 2px;
+}
+
+.social {
+    color: #cfcfcf;
+    font-size: 3em;
+}
+
+.Menu {
+
+    text-decoration: none;
+    color: #cfcfcf;
+    font-size: 1.1em;
+
+}
+
+.copy {
+    font-size: 1em;
+    text-align: start;
+}
