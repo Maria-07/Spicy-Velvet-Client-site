@@ -33,6 +33,9 @@ const Header = () => {
               {user && (
                 <>
                   <Nav.Link as={Link} to="products">
+                    <span className="nav-bar link">PRODUCTS</span>
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="myItem">
                     <span className="nav-bar link">MY ITEMS</span>
                   </Nav.Link>
                   <Nav.Link as={Link} to="addNewItem">
@@ -42,7 +45,7 @@ const Header = () => {
               )}
               {user ? (
                 <Nav.Link onClick={handleSignOut} as={Link} to="login">
-                  <span className="nav-bar link">SIGN OUT</span>
+                  <span className="nav-bar link">LOGOUT</span>
                 </Nav.Link>
               ) : (
                 <Nav.Link as={Link} to="login">

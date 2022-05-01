@@ -52,7 +52,7 @@ const Login = () => {
   }
 
   if (loading || loading1) {
-    return <p>Loading...</p>;
+    return <Loading></Loading>;
   }
 
   if (user || user1) {
@@ -93,7 +93,7 @@ const Login = () => {
           <br />
           {errorElement}
           {/* <p>{error?.message}</p> */}
-          {loading && <Loading></Loading>}
+          {<Loading></Loading> && loading}
 
           <input type="submit" className="submit-btn w-100" value="Login" />
 
@@ -103,16 +103,6 @@ const Login = () => {
               Create New Account
             </Link>
           </p>
-
-          {/* <p>
-            Forget Password?{" "}
-            <button
-              onClick={resetPassword}
-              className="text-decoration-none link-text password"
-            >
-              Reset Password.
-            </button>
-          </p> */}
 
           <div className="my-4 or">Or</div>
 

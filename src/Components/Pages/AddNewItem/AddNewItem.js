@@ -1,16 +1,22 @@
-// import axios from "axios";
+import axios from "axios";
 import React from "react";
 import { Container } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
+import auth from "../../../firebase.init";
 import "./AddNewItem.css";
 
 const AddNewItem = () => {
   const { register, handleSubmit } = useForm();
+  const [user] = useAuthState(auth);
+
   const onSubmit = (data) => {
     console.log(data);
-    const url = `https://dry-sea-63438.herokuapp.com/products`;
+    const url1 = `https://dry-sea-63438.herokuapp.com/products`;
+    const url2 = `https://dry-sea-63438.herokuapp.com/myItem`;
 
-    fetch(url, {
+    fetch(url1, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -19,8 +25,62 @@ const AddNewItem = () => {
     })
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
+        if (result.insertedId) {
+          toast("Your new product is added !!!");
+          // data.target.reset();
+        }
       });
+
+    fetch(url2, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        // console.log(result);
+        if (result.insertedId) {
+          toast("Check my-Item for your added product !!!");
+          // data.target.reset();
+        }
+      });
+
+    // const newData = { data };
+    // console.log(newData.data);
+    // axios.post(url1, newData).then((response) => {
+    //   console.log(response);
+    //   const { data } = response;
+    //   if (data.insertedId) {
+    //     toast("your order is booked");
+    //     // data.target.reset();
+    //   }
+    // });
+
+    // axios.post(url2, newData).then((response) => {
+    //   console.log(response);
+    //   const { data } = response;
+    //   if (data.insertedId) {
+    //     toast("your my Item is booked");
+    //     // data.target.reset();
+    //   }
+    // });
+
+    // reset ();
+
+    // fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+    //   .then((response) => response.json())
+    //   .then((result) => {
+    //     console.log(result);
+    //   });
   };
   return (
     <div>
@@ -68,9 +128,18 @@ const AddNewItem = () => {
               type="text"
               {...register("picture")}
             />
+            <input
+              className="w-100 p-2 my-2"
+              placeholder="Product Photo URL"
+              type="email"
+              value={user.email}
+              readOnly
+              {...register("email")}
+            />
             <input className="delivered" type="submit" value="ADD PRODUCT" />
           </form>
         </Container>
+        <ToastContainer />
       </div>
     </div>
   );

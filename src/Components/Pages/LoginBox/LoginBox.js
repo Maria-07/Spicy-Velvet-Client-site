@@ -23,7 +23,7 @@ const LoginBox = () => {
           <div className="mx-5 p-3 bd-highlight col-example">
             {user ? (
               <Link to={"login"} onClick={handleSignOut}>
-                <button className="login ">Sign out</button>
+                <button className="login ">Logout</button>
               </Link>
             ) : (
               <Link to={"login"}>

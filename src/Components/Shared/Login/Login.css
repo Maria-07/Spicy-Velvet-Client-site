@@ -62,7 +62,12 @@
 }
 
 .social {
-
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #627261;
+    font-size: 1.2em;
+    font-weight: 500;
     border: none;
     background-color: none;
 }

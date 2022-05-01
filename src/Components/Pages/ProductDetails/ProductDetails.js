@@ -149,7 +149,7 @@ const ProductDetails = () => {
                 // type="text"
                 type="number"
                 onBlur={handleNumberBlur}
-                placeholder="put number"
+                placeholder="Number of Product"
               />
             </div>
             <p className="error">{error}</p>

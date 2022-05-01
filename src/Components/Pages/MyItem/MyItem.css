@@ -1,0 +1,22 @@
+.item {
+    background-color: #D0D5D0;
+}
+
+.item-detail {
+    text-align: start;
+}
+
+.item-dlt-btn {
+    border: none;
+    width: 25%;
+    background-color: #333932;
+    color: #F5F5F3;
+    font-size: 1.2em;
+    font-weight: 500;
+    /* padding: 10px 3em; */
+    transition: ease-in-out 0.3s;
+}
+
+.item-dlt-btn:hover {
+    background-color: #627261;
+}
