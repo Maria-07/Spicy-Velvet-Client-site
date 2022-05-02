@@ -3,11 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faStar,
-  faArrowLeft,
-  faArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faStar, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./ProductDetails.css";
 import Rating from "react-rating";
 import axios from "axios";

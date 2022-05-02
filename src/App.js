@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ManageInventories from "./Components/Pages/ManageInventories/ManageInventories";
 import AddNewItem from "./Components/Pages/AddNewItem/AddNewItem";
 import MyItems from "./Components/Pages/MyItems/MyItems";
+import NotFoundpage from "./Components/Shared/NotFoundpage/NotFoundpage";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
+        <Route path="/*" element={<NotFoundpage></NotFoundpage>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
