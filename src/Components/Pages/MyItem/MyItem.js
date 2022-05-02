@@ -10,21 +10,21 @@ const MyItem = ({ item }) => {
 
   const handleDeleteProduct = (id) => {
     // const email = user.email;
-    // const proceed = window.confirm(
-    //   "Are you sure you want to delete this product"
-    // );
-    // if (proceed) {
-    //   console.log("deleting this :", id);
-    //   const url = `http://localhost:5000/myItem?id=${id}`;
-    //   fetch(url, {
-    //     method: "DELETE",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   })
-    //     .then((res) => res.json())
-    //     .then((data) => console.log(data));
-    // }
+    const proceed = window.confirm(
+      "Are you sure you want to delete this product"
+    );
+    if (proceed) {
+      console.log("deleting this :", id);
+      const url = `https://dry-sea-63438.herokuapp.com/myItem/${id}`;
+      fetch(url, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    }
   };
 
   return (

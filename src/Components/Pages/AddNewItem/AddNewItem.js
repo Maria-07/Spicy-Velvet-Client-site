@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import React from "react";
 import { Container } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -8,7 +8,12 @@ import auth from "../../../firebase.init";
 import "./AddNewItem.css";
 
 const AddNewItem = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    // reset,
+    // formState: { isSubmitSuccessful },
+  } = useForm();
   const [user] = useAuthState(auth);
 
   const onSubmit = (data) => {
@@ -82,6 +87,13 @@ const AddNewItem = () => {
     //     console.log(result);
     //   });
   };
+
+  // React.useEffect(() => {
+  //   if (formState.isSubmitSuccessful) {
+  //     reset({ something: "" });
+  //   }
+  // }, [formState, submittedData, reset]);
+
   return (
     <div>
       <h1 className="Inventory-header my-5">Add New Item</h1>
