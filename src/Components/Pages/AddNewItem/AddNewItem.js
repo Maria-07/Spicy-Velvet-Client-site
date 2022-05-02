@@ -52,40 +52,6 @@ const AddNewItem = () => {
           // data.target.reset();
         }
       });
-
-    // const newData = { data };
-    // console.log(newData.data);
-    // axios.post(url1, newData).then((response) => {
-    //   console.log(response);
-    //   const { data } = response;
-    //   if (data.insertedId) {
-    //     toast("your order is booked");
-    //     // data.target.reset();
-    //   }
-    // });
-
-    // axios.post(url2, newData).then((response) => {
-    //   console.log(response);
-    //   const { data } = response;
-    //   if (data.insertedId) {
-    //     toast("your my Item is booked");
-    //     // data.target.reset();
-    //   }
-    // });
-
-    // reset ();
-
-    // fetch(url, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(data),
-    // })
-    //   .then((response) => response.json())
-    //   .then((result) => {
-    //     console.log(result);
-    //   });
   };
 
   // React.useEffect(() => {
