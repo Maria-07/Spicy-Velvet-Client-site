@@ -1,5 +1,7 @@
 .item {
     background-color: #D0D5D0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .item-detail {
@@ -19,4 +21,12 @@
 
 .item-dlt-btn:hover {
     background-color: #627261;
+}
+
+@media only screen and (max-width: 688px) {
+
+    .item {
+
+        flex-wrap: wrap;
+    }
 }
