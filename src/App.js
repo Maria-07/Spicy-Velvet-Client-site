@@ -13,6 +13,7 @@ import ManageInventories from "./Components/Pages/ManageInventories/ManageInvent
 import AddNewItem from "./Components/Pages/AddNewItem/AddNewItem";
 import MyItems from "./Components/Pages/MyItems/MyItems";
 import NotFoundpage from "./Components/Shared/NotFoundpage/NotFoundpage";
+import Blogs from "./Components/Pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route
           path="/products"
           element={
