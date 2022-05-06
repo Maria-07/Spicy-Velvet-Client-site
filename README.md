@@ -1,12 +1,33 @@
-# Getting Started with Spicy Velvet
+## Spicy Velvet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Spicy Velvet](https://spicy-velvet.web.app/) A warehouse management Website .
 
-## Available Scripts
+### Used Frameworks & Libraries in this Project
 
-In the project directory, you can run:
+    - axios
+    - firebase
+    - react
+    - react-dom
+    - react-router-dom
+    - react-firebase-hooks
+    - react-hook-form
+    - react-bootstrap
+    - react-rating
+    - react-toastify
+    - react-scripts
+    - fortawesome/react-fontawesome
 
-### `npm start`
+### For Server Site of Spicy Velvet Used Frameworks & Libraries
+
+    - Express
+    - Environment
+    - Heroku
+    - JWT
+
+## About Spicy Velvet
+
+This website is related to multiple items warehouse/inventory management website.
+Where we can find different types of Spices. We can Add/Remove items with our necessity.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
