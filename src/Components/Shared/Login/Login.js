@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import {
@@ -30,19 +31,6 @@ const Login = () => {
     errorElement = <p className="error">Error: {error1.message}</p>;
   }
 
-  // // Password reset
-  // const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
-  // const resetPassword = async () => {
-  //   // const email = emailRef.current.value;
-  //   console.log(email);
-  //   if (email) {
-  //     await sendPasswordResetEmail(email);
-  //     toast("Sent email");
-  //   } else {
-  //     toast("please enter your email address");
-  //   }
-  // };
-
   // route navigate
   const location = useLocation();
   const navigate = useNavigate();
@@ -56,12 +44,18 @@ const Login = () => {
   }
 
   if (user || user1) {
-    navigate(from, { replace: true });
+    // navigate(from, { replace: true });
   }
 
-  const handleUserSignIn = (event) => {
+  const handleUserSignIn = async (event) => {
     event.preventDefault();
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.post(
+      "https://dry-sea-63438.herokuapp.com/login",
+      { email }
+    );
+    localStorage.setItem("accessToken", data);
+    navigate(from, { replace: true });
   };
 
   return (

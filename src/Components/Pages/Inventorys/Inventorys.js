@@ -18,7 +18,7 @@ const Inventorys = () => {
   }, []);
 
   const sixProducts = products.slice(0, 6);
-  console.log(sixProducts);
+  // console.log(sixProducts);
   return (
     <div className="inventorys">
       <Container>

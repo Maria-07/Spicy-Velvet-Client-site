@@ -47,7 +47,7 @@ const SignUp = () => {
   const handleCreateUser = (event) => {
     event.preventDefault();
 
-    console.log(email, password, confirmPassword);
+    // console.log(email, password, confirmPassword);
     if (password !== confirmPassword) {
       setError("your two passwords are not matched");
       return;

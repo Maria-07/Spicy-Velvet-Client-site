@@ -12,9 +12,14 @@ const MyItems = () => {
   useEffect(() => {
     const getItems = async () => {
       const email = user.email;
-      console.log(user.email);
+      // console.log(user.email);
       const { data } = await axios.get(
-        `https://dry-sea-63438.herokuapp.com/myitem?email=${email}`
+        `https://dry-sea-63438.herokuapp.com/myItem?email=${email}`,
+        {
+          headers: {
+            authorization: `Barer ${localStorage.getItem("accesstoken")}`,
+          },
+        }
       );
       setItems(data);
     };
@@ -24,8 +29,8 @@ const MyItems = () => {
   // console.log(items);
   return (
     <div>
-      <Container>
-        <h1>my items {items.length}</h1>
+      <Container className="my-5">
+        <h1 className="my-5">my items {items.length}</h1>
         <Row>
           {items.map((item) => (
             <MyItem key={item._id} item={item}></MyItem>

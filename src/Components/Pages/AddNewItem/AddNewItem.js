@@ -17,7 +17,7 @@ const AddNewItem = () => {
   const [user] = useAuthState(auth);
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     const url1 = `https://dry-sea-63438.herokuapp.com/products`;
     const url2 = `https://dry-sea-63438.herokuapp.com/myItem`;
 

@@ -12,7 +12,7 @@ const ManageInventory = ({ product }) => {
       "Are you sure you want to delete this product"
     );
     if (proceed) {
-      console.log("deleting this :", id);
+      // console.log("deleting this :", id);
       const url = `https://dry-sea-63438.herokuapp.com/products/${id}`;
       fetch(url, {
         method: "DELETE",
