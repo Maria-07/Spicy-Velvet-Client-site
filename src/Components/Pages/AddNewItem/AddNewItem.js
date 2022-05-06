@@ -31,10 +31,6 @@ const AddNewItem = () => {
       .then((response) => response.json())
       .then((result) => {
         // console.log(result);
-        if (result.insertedId) {
-          toast("Your new product is added !!!");
-          // data.target.reset();
-        }
       });
 
     fetch(url2, {

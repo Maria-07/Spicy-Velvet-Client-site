@@ -17,7 +17,7 @@ const MyItems = () => {
         `https://dry-sea-63438.herokuapp.com/myItem?email=${email}`,
         {
           headers: {
-            authorization: `Barer ${localStorage.getItem("accesstoken")}`,
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
         }
       );
