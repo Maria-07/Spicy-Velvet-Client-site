@@ -4,3 +4,22 @@
     font-weight: 500;
     color: #627261;
 }
+
+.pagination {
+    text-align: center;
+}
+
+.pagination button {
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 3px 10px;
+    margin: 5px 10px;
+    border: 2px solid #333932;
+    background-color: #D0D5D0;
+}
+
+.pagination .selected {
+    color: #D0D5D0;
+    border: 2px solid #333932;
+    background-color: #627261;
+}

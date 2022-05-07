@@ -45,6 +45,7 @@ const AddNewItem = () => {
         // console.log(result);
         if (result.insertedId) {
           toast("Check my-Item for your added product !!!");
+          window.location.reload();
           // data.target.reset();
         }
       });

@@ -22,23 +22,6 @@ const ProductDetails = () => {
     setQuantity(product.Quantity);
   }, [product]);
 
-  const quantityNumber = () => {
-    // console.log(quantity);
-    const data = {
-      quantity: quantity - 1,
-    };
-    axios
-      .put(`https://dry-sea-63438.herokuapp.com/products/${productId}`, data)
-      .then((response) => {
-        const { data } = response;
-        // console.log(data);
-        if (data.modifiedCount === 1) {
-          toast("One of your product is delivered");
-          setQuantity(quantity - 1);
-        }
-      });
-  };
-
   const handleNumberBlur = (e) => {
     const num = e.target.value;
     // isNaN(num) ? setNumber(num) : setError("Enter a valid number");
@@ -70,6 +53,24 @@ const ProductDetails = () => {
     } else {
       setError("Enter a valid number");
     }
+  };
+
+  const quantityNumber = () => {
+    // console.log(quantity);
+    const data = {
+      quantity: quantity - 1,
+    };
+    axios
+      .put(`https://dry-sea-63438.herokuapp.com/products/${productId}`, data)
+      .then((response) => {
+        const { data } = response;
+        // console.log(data);
+
+        if (data.modifiedCount === 1) {
+          toast("One of your product is delivered");
+          setQuantity(quantity - 1);
+        }
+      });
   };
 
   return (
