@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 import ManageInventory from "../ManageInventory/ManageInventory";
 import "./ManageInventories.css";
 
@@ -30,6 +31,7 @@ const ManageInventories = () => {
   console.log(products.length);
   return (
     <div>
+      <PageTitle title="Products"></PageTitle>
       <Container className="my-5">
         <Row>
           <Col>

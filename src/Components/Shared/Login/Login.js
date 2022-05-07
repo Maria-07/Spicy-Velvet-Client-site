@@ -8,6 +8,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../Loading/Loading";
+import PageTitle from "../PageTitle/PageTitle";
 import "./Login.css";
 
 const Login = () => {
@@ -60,6 +61,7 @@ const Login = () => {
 
   return (
     <Container>
+      <PageTitle title="Login"></PageTitle>
       <div className="login-form mx-auto">
         <form onSubmit={handleUserSignIn}>
           <h1>Log In</h1>

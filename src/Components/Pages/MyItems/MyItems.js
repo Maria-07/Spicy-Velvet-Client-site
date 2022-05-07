@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 import MyItem from "../MyItem/MyItem";
 
 const MyItems = () => {
@@ -29,6 +30,7 @@ const MyItems = () => {
   // console.log(items);
   return (
     <div>
+      <PageTitle title="My-Items"></PageTitle>
       <Container className="my-5">
         <h1 className="my-5">my items {items.length}</h1>
         <Row>

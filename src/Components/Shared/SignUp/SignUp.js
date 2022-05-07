@@ -6,6 +6,7 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import PageTitle from "../PageTitle/PageTitle";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -62,6 +63,7 @@ const SignUp = () => {
   return (
     <div>
       <Container>
+        <PageTitle title="SignUp"></PageTitle>
         <div className="login-form mx-auto">
           <form onSubmit={handleCreateUser}>
             <h1>Sign Up</h1>

@@ -12,6 +12,7 @@
     - react-firebase-hooks
     - react-hook-form
     - react-bootstrap
+    - react-helmet-async
     - react-rating
     - react-toastify
     - react-scripts

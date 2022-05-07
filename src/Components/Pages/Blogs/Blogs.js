@@ -1,11 +1,13 @@
 import React from "react";
 import { Accordion, Container } from "react-bootstrap";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 import "./Blogs.css";
 
 const Blogs = () => {
   return (
     <div className="my-5 py-5">
       <Container>
+        <PageTitle title="Blogs"></PageTitle>
         <h1 className="mb-5">Some Question and Answers</h1>
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">

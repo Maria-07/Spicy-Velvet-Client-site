@@ -1,4 +1,6 @@
 import React from "react";
+import PageTitle from "../../../Shared/PageTitle/PageTitle";
+
 import Inventorys from "../../Inventorys/Inventorys";
 import LoginBox from "../../LoginBox/LoginBox";
 import Banner from "../Banner/Banner";
@@ -8,6 +10,7 @@ import Spices from "../Spices/Spices";
 const Footer = () => {
   return (
     <div>
+      <PageTitle title="Home"></PageTitle>
       <Banner></Banner>
       <LoginBox></LoginBox>
       <SpiceDeals></SpiceDeals>

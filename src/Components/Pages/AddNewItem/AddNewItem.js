@@ -5,13 +5,14 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import auth from "../../../firebase.init";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 import "./AddNewItem.css";
 
 const AddNewItem = () => {
   const {
     register,
     handleSubmit,
-    // reset,
+    reset,
     // formState: { isSubmitSuccessful },
   } = useForm();
   const [user] = useAuthState(auth);
@@ -45,10 +46,10 @@ const AddNewItem = () => {
         // console.log(result);
         if (result.insertedId) {
           toast("Check my-Item for your added product !!!");
-          window.location.reload();
           // data.target.reset();
         }
       });
+    reset();
   };
 
   // React.useEffect(() => {
@@ -59,6 +60,7 @@ const AddNewItem = () => {
 
   return (
     <div>
+      <PageTitle title="Add-Item"></PageTitle>
       <h1 className="Inventory-header my-5">Add New Item</h1>
       <div className="additem">
         <Container>
